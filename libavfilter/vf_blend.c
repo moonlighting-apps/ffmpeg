@@ -400,6 +400,7 @@ static int config_output(AVFilterLink *outlink)
         av_log(ctx, AV_LOG_ERROR, "inputs must be of same pixel format\n");
         return AVERROR(EINVAL);
     }
+    /*
     if (toplink->w                       != bottomlink->w ||
         toplink->h                       != bottomlink->h ||
         toplink->sample_aspect_ratio.num != bottomlink->sample_aspect_ratio.num ||
@@ -415,6 +416,7 @@ static int config_output(AVFilterLink *outlink)
                bottomlink->sample_aspect_ratio.den);
         return AVERROR(EINVAL);
     }
+    */
 
     outlink->w = toplink->w;
     outlink->h = toplink->h;
